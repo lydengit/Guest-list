@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List</title>
+    <style>
+        body {
+            background-color: #404040;
+            color: whitesmoke;
+        }
+
+        .guest {
+            color: dimgray;
+        }
+
+        .bg-white {
+            background-color: whitesmoke;
+            color: #404040;
+            padding: 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guest List</h1>
+    <div style="width: 700px;">
+        <form id="form">
+            <input type="text" id="first-name" name="first-name" placeholder="First name..">
+            <input type="text" id="last-name" name="last-name" placeholder="Last name..">
+            <input type="text" id="phone-number" name="phone-number" placeholder="Phone number..">
+            <input type="text" id="email" name="email" placeholder="Email..">
+            <input type="submit" id="add-guest">
+        </form>
+        <div>
+            <h3>Guests</h3>
+            <div style="margin-bottom: 20px;">
+                <div style="margin-bottom: 20px;">
+                    Total: <span id="all-guests" class="bg-white">0</span>
+                    Unchecked: <span id="unchecked" class="bg-white">0</span>
+                    Checked: <span id="checked" class="bg-white">0</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" id="remove-all" value="Clear List">
+                </div>
+                <div>
+                    Search: <input type="text" id="search-guest" placeholder="Name or phone number..">
+                </div>
+            </div>
+            <div id="guest-list"></div>
+        </div>
+    </div>
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
